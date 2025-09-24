@@ -1,56 +1,127 @@
-Synthetic Data Generation (SDG) App
+# 🛳️ Titanic Survival Prediction
+## 📌 Project Overview
 
-A simple Python application built with Streamlit that allows users to generate synthetic datasets for testing, analysis, and experimentation.
+This project uses the famous Titanic dataset to predict whether a passenger survived or not based on features such as age, gender, ticket class, and fare.
+The goal is to build and evaluate multiple machine learning classification models to compare their performance and identify the best one.
 
-🚀 Features
+## 📂 Dataset
 
-Generate random datasets with customizable rows and columns
+The dataset is taken from Kaggle’s Titanic Competition.
 
-Choose between different data types (numeric, categorical, datetime)
+## Key features used in this project:
 
-Download generated datasets as CSV files
+Pclass – Ticket class (1st, 2nd, 3rd)
 
-User-friendly interface with Streamlit
+Sex – Gender of passenger
 
-📦 Installation
+Age – Passenger’s age
 
-Clone this repository (or download the project folder):
+SibSp – Number of siblings/spouses aboard
 
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+Parch – Number of parents/children aboard
 
+Fare – Ticket price
 
-Create a virtual environment (optional but recommended):
+Embarked – Port of embarkation (C = Cherbourg, Q = Queenstown, S = Southampton)
 
-python -m venv venv
-source venv/bin/activate   # On macOS/Linux
-venv\Scripts\activate      # On Windows
+Target variable:
 
+Survived – 0 = No, 1 = Yes
 
-Install dependencies:
+## ⚙️ Project Pipeline
 
-pip install -r requirements.txt
-
-▶️ Usage
-
-Run the Streamlit app:
-
-streamlit run app.py
+### Data Preprocessing
 
 
-Once the server starts, open the local URL shown in your terminal (usually http://localhost:8501/) to access the app in your browser.
+Handle missing values (Age, Embarked)
 
-📂 Project Structure
-├── app.py             # Main Streamlit app
-├── requirements.txt   # Project dependencies
-└── README.md          # Project documentation
+Drop irrelevant columns (Cabin, Name, Ticket, PassengerId)
 
-🤝 Contributing
+Encode categorical variables (Sex, Embarked)
 
-Feel free to fork this repository, make improvements, and submit pull requests.
+Exploratory Data Analysis (EDA)
 
-📜 License
+Visualizations of survival distribution
 
-This project is licensed under the MIT License.
+Insights by gender, class, and age
 
-✨ Built with ❤️ using Python and Streamlit
+Model Training
+
+Logistic Regression
+
+Decision Tree
+
+Random Forest
+
+K-Nearest Neighbors (KNN)
+
+Support Vector Machine (SVM)
+
+Model Evaluation
+
+Accuracy Score
+
+Classification Report (Precision, Recall, F1-score)
+
+ROC-AUC Score
+
+Confusion Matrix Visualization
+
+Final Comparison
+
+Leaderboard comparing all models
+
+Best performance achieved by Random Forest
+
+## 📊 Results
+
+Model	Test Accuracy	ROC-AUC
+
+Logistic Regression	~0.80	~0.86
+
+Decision Tree	~0.76	~0.77
+
+Random Forest	~0.84	~0.89
+
+KNN	~0.78	~0.82
+
+SVM	~0.82	~0.87
+
+📌 Random Forest achieved the highest performance overall.
+
+## 🚀 How to Run
+
+Clone the repository
+
+```bash
+git clone https://github.com/ZainabNoushab/titanic-survival-prediction.git
+cd titanic-survival-prediction
+```
+
+Run the notebook in Jupyter/Colab
+
+## 🛠️ Technologies Used
+
+Python
+
+Pandas
+
+NumPy
+
+Matplotlib
+
+Seaborn
+
+Scikit-learn
+
+## 📌 Future Improvements
+
+Feature engineering (e.g., FamilySize, Title extraction)
+
+Hyperparameter tuning with GridSearchCV
+
+Advanced models (XGBoost, LightGBM, CatBoost)
+
+## 🙌 Acknowledgements
+
+Dataset from Kaggle: (Titanic - Machine Learning from Disaster)
