@@ -70,9 +70,3 @@ _Aspiring Data Analyst | Computational Math & CS Student | Python + SQL Enthusia
 🔗 [LinkedIn](https://www.linkedin.com/in/zainab-noushab)  
 🔗 [GitHub](https://github.com/ZainabNoushab)
 
----
-
-## 📌 Status
-✅ Project Complete  
-📤 Uploaded to GitHub  
-📢 Shared on LinkedIn  
